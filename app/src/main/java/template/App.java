@@ -11,34 +11,17 @@ public class App implements Runnable {
   @Option(names = {"-h", "--help"})
   private boolean help;
 
-  @Option(names = {"-c", "--bytes"})
-  private boolean printBytes;
-
-  @Option(names = {"-m", "--chars"})
-  private boolean printChars;
-
-  @Option(names = {"-w", "--words"})
-  private boolean printWords;
-
-  @Option(names = {"-l", "--lines"})
-  private boolean printLines;
-
-
   @Override
   public void run() {
     if (help) {
       System.out.println(getHelp());
-      return;
+    } else {
+      System.out.println(getGreeting());
     }
+  }
 
-    final var options = new OptionsBuilder()
-      .printBytes(printBytes)
-      .printChars(printChars)
-      .printWords(printWords)
-      .printLines(printLines)
-      .build();
-
-
+  public String getGreeting() {
+    return "Hello, world!";
   }
 
   private String getHelp() {

@@ -24,6 +24,7 @@ dependencies {
     compileOnly 'org.immutables:value:2.9.2'
     compileOnly 'org.immutables:builder:2.9.2'
 
+    // CLI library
     implementation 'info.picocli:picocli:4.7.5'
 
     // Logging
