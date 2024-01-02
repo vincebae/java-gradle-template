@@ -4,28 +4,18 @@
 package template;
 
 import picocli.CommandLine;
-import picocli.CommandLine.Option;
+import picocli.CommandLine.Command;
 
+@Command(name = "run.sh", mixinStandardHelpOptions = true, version = "0.0.1")
 public class App implements Runnable {
-
-  @Option(names = {"-h", "--help"})
-  private boolean help;
 
   @Override
   public void run() {
-    if (help) {
-      System.out.println(getHelp());
-    } else {
-      System.out.println(getGreeting());
-    }
+    System.out.println(getGreeting());
   }
 
   public String getGreeting() {
     return "Hello, world!";
-  }
-
-  private String getHelp() {
-    return "Help message";
   }
 
   public static void main(String[] args) {
