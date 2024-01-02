@@ -1,7 +1,3 @@
 #!/bin/sh
 
-if [ $# -eq 0 ]; then
-  ./gradlew run
-else
-  ./gradlew run --args="$*"
-fi
+java -cp "app/build/libs/app-all.jar" template.App $@

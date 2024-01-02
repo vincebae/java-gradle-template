@@ -13,6 +13,10 @@ In-progress
 #### Build
 `$ ./gradlew build`
 
+#### Build Fat Jar
+
+`$ ./gradlew shadowJar`
+
 #### Run Tests
 
 `$ ./gradlew test`
